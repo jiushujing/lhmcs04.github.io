@@ -82,8 +82,18 @@ body {
 .header-actions i { margin-left: 20px; color: var(--text-primary); }
 .page-title { font-weight: bold; }
 
-/* 搜索框 */
-.search-bar { background-color: var(--white-color); border-radius: 8px; margin: 5px 15px; padding: 8px 15px; display: flex; align-items: center; justify-content: center; color: var(--text-secondary); }
+/* 搜索框 (已修改) */
+.search-bar {
+    background-color: var(--white-color);
+    border-radius: 8px;
+    margin: 5px 15px;
+    /* 上下10px，左右15px的内边距，这里控制高度 */
+    padding: 10px 15px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+}
 .search-bar i { margin-right: 8px; }
 
 /* 主内容区域 */
@@ -91,12 +101,13 @@ body {
 .page { display: none; height: 100%; flex-direction: column; }
 .page.active { display: flex; }
 
-/* 消息页面 */
-.chat-list { 
-    flex: 1; 
-    overflow-y: auto;
-    margin-top: 10px; /* 新增：与搜索框的间距 */
+/* 消息页面 & 联系人页面列表的通用间距 (已修改) */
+.chat-list, .contact-groups {
+    margin-top: 10px;
 }
+
+/* 消息页面列表 */
+.chat-list { flex: 1; overflow-y: auto; }
 .chat-item { display: flex; align-items: center; padding: 10px 15px; background-color: var(--white-color); }
 .chat-item:not(:last-child) { border-bottom: 1px solid var(--border-color); }
 .chat-item img, .chat-item .avatar-group-logo { width: 50px; height: 50px; border-radius: 50%; margin-right: 12px; flex-shrink: 0; }
@@ -108,11 +119,8 @@ body {
 .chat-meta i { font-size: 12px; margin-left: 4px; }
 .vip { background: linear-gradient(to right, #fce5b3, #e4a55d); color: #6c4f2f; font-size: 10px; padding: 1px 5px; border-radius: 8px; font-weight: bold; }
 
-/* 联系人页面 */
-.contact-groups { 
-    margin-top: 10px; /* 修改：确保与搜索框的间距和消息页一致 */
-    background-color: var(--white-color); 
-}
+/* 联系人页面列表 */
+.contact-groups { background-color: var(--white-color); }
 .group-item .group-header { display: flex; justify-content: space-between; align-items: center; padding: 15px; font-size: 14px; border-bottom: 1px solid var(--border-color); }
 .group-header div { display: flex; align-items: center; }
 .group-header i { margin-right: 10px; color: var(--text-secondary); }
