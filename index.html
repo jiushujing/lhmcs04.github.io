@@ -11,7 +11,7 @@
 <body>
 
     <div class="app-container">
-        <!-- 侧边栏UI已完全重做，严格参考图二 -->
+        <!-- 侧边栏菜单 -->
         <div class="sidebar-menu">
             <div class="sidebar-background"></div>
             <div class="sidebar-content">
@@ -21,10 +21,9 @@
                     <button class="action-btn"><i class="fa-brands fa-qq"></i></button>
                     <button class="action-btn" id="close-sidebar-btn"><i class="fa-solid fa-xmark"></i></button>
                 </div>
-                
                 <div class="sidebar-profile-card">
                     <div class="profile-info">
-                        <img src="https://i.imgur.com/Jz9v5aB.png" alt="avatar" class="avatar"> <!-- 换成猫咪线稿头像 -->
+                        <img src="https://i.imgur.com/Jz9v5aB.png" alt="avatar" class="avatar">
                         <div class="profile-details">
                             <div class="profile-name">京九殊 <i class="fa-solid fa-arrows-rotate"></i> 切换账号</div>
                             <div class="profile-status">我的心是旷野的鸟，在你的眼…</div>
@@ -32,14 +31,9 @@
                         <i class="fa-solid fa-chevron-right"></i>
                     </div>
                     <div class="profile-rating">
-                        <i class="fa-solid fa-crown"></i>
-                        <i class="fa-solid fa-moon"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-crown"></i><i class="fa-solid fa-moon"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
                 </div>
-
                 <div class="sidebar-nav-list">
                     <a href="#" class="nav-item"><i class="fa-solid fa-image"></i><span>相册</span><i class="fa-solid fa-chevron-right"></i></a>
                     <a href="#" class="nav-item"><i class="fa-solid fa-star"></i><span>收藏</span><i class="fa-solid fa-chevron-right"></i></a>
@@ -48,9 +42,6 @@
                     <a href="#" class="nav-item"><i class="fa-solid fa-gem"></i><span>会员中心</span><i class="fa-solid fa-chevron-right"></i></a>
                     <a href="#" class="nav-item"><i class="fa-solid fa-shirt"></i><span>个性装扮</span><i class="fa-solid fa-chevron-right"></i></a>
                 </div>
-
-                <!-- “免流量”条目已确保被删除 -->
-
                 <div class="sidebar-bottom-actions">
                     <button><i class="fa-solid fa-gear"></i><span>设置</span></button>
                     <button><i class="fa-solid fa-moon"></i><span>夜间</span></button>
@@ -98,19 +89,17 @@
                     </div>
                 </div>
 
-                <!-- 联系人页面 -->
+                <!-- 联系人页面 (已修改) -->
                 <div id="page-contacts" class="page">
                     <header class="page-header"><div class="page-title">联系人</div><div class="header-actions"><i class="fa-solid fa-user-plus"></i></div></header>
                     <div class="search-bar"><i class="fa-solid fa-magnifying-glass"></i><span>搜索</span></div>
-                    <div class="contact-options"><div class="contact-option-item"><span>新朋友</span><i class="fa-solid fa-chevron-right"></i></div><div class="contact-option-item"><span>群通知</span><i class="fa-solid fa-chevron-right"></i></div></div>
+                    <!-- “新朋友”和“群通知”已被删除 -->
                     <div class="contact-groups"><div class="group-item"><div class="group-header"><div><i class="fa-solid fa-chevron-right"></i> 特别关心</div><span>3/3</span></div></div><div class="group-item"><div class="group-header"><div><i class="fa-solid fa-chevron-right"></i> 友</div><span>585/850</span></div></div><div class="group-item"><div class="group-header"><div><i class="fa-solid fa-chevron-right"></i> 亲</div><span>3/4</span></div></div></div>
                 </div>
 
                 <!-- 小工具页面 -->
                 <div id="page-tools" class="page">
-                    <header class="page-header">
-                        <div class="page-title">小工具</div>
-                    </header>
+                    <header class="page-header"><div class="page-title">小工具</div></header>
                     <div class="tools-page-content">
                         <div class="tool-category">
                             <h3 class="tool-category-title">功能类</h3>
@@ -154,19 +143,10 @@
 
             <!-- 底部导航栏 -->
             <nav class="bottom-nav">
-                <button class="nav-button active" data-target="page-messages">
-                    <i class="fa-solid fa-comment-dots"></i>
-                </button>
-                <button class="nav-button" data-target="page-contacts">
-                    <i class="fa-solid fa-address-book"></i>
-                </button>
-                <button class="nav-button" data-target="page-tools">
-                    <i class="fa-solid fa-toolbox"></i>
-                </button>
-                <button class="nav-button" data-target="page-feed">
-                    <i class="fa-solid fa-star"></i>
-                    <div class="notification-dot"></div>
-                </button>
+                <button class="nav-button active" data-target="page-messages"><i class="fa-solid fa-comment-dots"></i></button>
+                <button class="nav-button" data-target="page-contacts"><i class="fa-solid fa-address-book"></i></button>
+                <button class="nav-button" data-target="page-tools"><i class="fa-solid fa-toolbox"></i></button>
+                <button class="nav-button" data-target="page-feed"><i class="fa-solid fa-star"></i><div class="notification-dot"></div></button>
             </nav>
         </div> <!-- End of main-content-wrapper -->
     </div>
