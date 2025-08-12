@@ -33,9 +33,21 @@ body {
     flex-direction: column;
 }
 
-/* 侧边栏样式 */
+/* 侧边栏样式 (已恢复) */
 .sidebar-menu { position: absolute; top: 0; left: 0; bottom: 0; width: 85%; z-index: 1000; transform: translateX(-100%); transition: transform 0.3s ease-in-out; display: flex; flex-direction: column; color: var(--text-primary); }
-.sidebar-background { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('https://picsum.photos/seed/animebg/420/880'); background-size: cover; background-position: center; filter: brightness(0.9); z-index: -1; }
+.sidebar-background { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    /* 更换为固定的浅色背景图 */
+    background-image: url('https://images.pexels.com/photos/1032650/pexels-photo-1032650.jpeg?auto=compress&cs=tinysrgb&w=800'); 
+    background-size: cover; 
+    background-position: center; 
+    filter: brightness(0.9); 
+    z-index: -1; 
+}
 .sidebar-content { padding: 20px; padding-top: 50px; display: flex; flex-direction: column; height: 100%; box-sizing: border-box; }
 .sidebar-top-actions { display: flex; justify-content: flex-start; gap: 10px; margin-bottom: 20px; }
 .sidebar-top-actions .action-btn { background-color: rgba(0, 0, 0, 0.3); color: white; border: none; border-radius: 15px; padding: 6px 12px; font-size: 12px; display: flex; align-items: center; gap: 5px; }
@@ -120,12 +132,12 @@ body {
 .action-item .fa-image { color: #4CAF50; }
 .action-item .fa-comment-dots { color: #2196F3; }
 .action-item .fa-grip { color: #9E9E9E; }
-/* 小工具页图标颜色 */
+/* 小工具页图标颜色 (已修改) */
 .action-item .fa-book-open { color: #FFC107; }
 .action-item .fa-music { color: #E91E63; }
 .action-item .fa-note-sticky { color: #FF9800; }
 .action-item .fa-egg { color: #F44336; }
-.action-item .fa-tractor { color: #795548; }
+.action-item .fa-leaf { color: #8BC34A; } /* 新的叶子图标颜色 */
 .action-item .fa-paw { color: #A1887F; }
 .action-item .fa-utensils { color: #607D8B; }
 .action-item .fa-user-secret { color: #424242; }
@@ -153,7 +165,7 @@ body {
 .feed-card-body p { margin: 10px 0; font-size: 15px; line-height: 1.5; }
 .shared-content { background-color: var(--bg-color); padding: 10px; border-radius: 6px; font-size: 14px; color: var(--text-secondary); }
 
-/* 新增：小工具页面样式 */
+/* 小工具页面样式 */
 .tools-page-content {
     flex: 1;
     overflow-y: auto;
@@ -169,7 +181,7 @@ body {
     margin-top: 10px;
 }
 
-/* 底部导航 (已修改) */
+/* 底部导航 */
 .bottom-nav {
     display: flex;
     justify-content: space-around;
@@ -177,7 +189,7 @@ body {
     background-color: #FDFDFD;
     border-top: 1px solid var(--border-color);
     padding: 5px 0;
-    height: 45px; /* 调整了底栏高度 */
+    height: 45px;
     flex-shrink: 0;
 }
 .nav-button {
@@ -192,13 +204,13 @@ body {
     align-items: center;
 }
 .nav-button i {
-    font-size: 22px; /* 调整了图标大小 */
+    font-size: 22px;
     margin-bottom: 0;
 }
 .nav-button.active { color: var(--primary-blue); }
 .notification-dot {
     position: absolute;
-    top: 5px; /* 调整了小红点位置 */
+    top: 5px;
     right: 8px;
     width: 8px;
     height: 8px;
