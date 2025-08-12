@@ -48,8 +48,6 @@
                     <a href="#" class="nav-item"><i class="fa-solid fa-crown"></i><span>会员中心</span><i class="fa-solid fa-chevron-right"></i></a>
                     <a href="#" class="nav-item"><i class="fa-solid fa-shirt"></i><span>个性装扮</span><i class="fa-solid fa-chevron-right"></i></a>
                 </div>
-                
-                <!-- “免流量”条目已删除 -->
 
                 <div class="sidebar-bottom-actions">
                     <button><i class="fa-solid fa-gear"></i><span>设置</span></button>
@@ -78,7 +76,7 @@
                 <!-- 消息页面 -->
                 <div id="page-messages" class="page active">
                     <header class="page-header">
-                        <div class="user-info" id="open-sidebar-btn"> <!-- 点击触发器 -->
+                        <div class="user-info" id="open-sidebar-btn">
                             <img src="https://picsum.photos/seed/user1/50/50" alt="avatar" class="avatar">
                             <span>京九殊</span>
                         </div>
@@ -91,74 +89,51 @@
                         <span>搜索</span>
                     </div>
                     <div class="chat-list">
-                        <div class="chat-item">
-                            <img src="https://picsum.photos/seed/user2/100/100" alt="avatar">
-                            <div class="chat-details">
-                                <div class="chat-title">小号</div>
-                                <div class="chat-message"><span>[哭]</span></div>
-                            </div>
-                            <div class="chat-meta">昨天 21:14</div>
-                        </div>
-                        <div class="chat-item">
-                            <div class="avatar-group-logo">LOG</div>
-                            <div class="chat-details">
-                                <div class="chat-title">设计-视觉传达</div>
-                                <div class="chat-message">继教关老师: @全体成员 本次已提交毕...</div>
-                            </div>
-                            <div class="chat-meta">06/05 <i class="fa-solid fa-bell-slash"></i></div>
-                        </div>
-                        <div class="chat-item">
-                            <img src="https://picsum.photos/seed/user3/100/100" alt="avatar">
-                            <div class="chat-details">
-                                <div class="chat-title">今天酒馆了吗？</div>
-                                <div class="chat-message"><span>[闭眼]</span></div>
-                            </div>
-                            <div class="chat-meta">16:15</div>
-                        </div>
-                        <div class="chat-item">
-                            <img src="https://picsum.photos/seed/user4/100/100" alt="avatar">
-                            <div class="chat-details">
-                                <div class="chat-title">月亮 <span class="vip">SVIP1</span></div>
-                                <div class="chat-message"><span>[哭]</span></div>
-                            </div>
-                            <div class="chat-meta">14:43</div>
-                        </div>
+                        <div class="chat-item"><img src="https://picsum.photos/seed/user2/100/100" alt="avatar"><div class="chat-details"><div class="chat-title">小号</div><div class="chat-message"><span>[哭]</span></div></div><div class="chat-meta">昨天 21:14</div></div>
+                        <div class="chat-item"><div class="avatar-group-logo">LOG</div><div class="chat-details"><div class="chat-title">设计-视觉传达</div><div class="chat-message">继教关老师: @全体成员 本次已提交毕...</div></div><div class="chat-meta">06/05 <i class="fa-solid fa-bell-slash"></i></div></div>
+                        <div class="chat-item"><img src="https://picsum.photos/seed/user3/100/100" alt="avatar"><div class="chat-details"><div class="chat-title">今天酒馆了吗？</div><div class="chat-message"><span>[闭眼]</span></div></div><div class="chat-meta">16:15</div></div>
+                        <div class="chat-item"><img src="https://picsum.photos/seed/user4/100/100" alt="avatar"><div class="chat-details"><div class="chat-title">月亮 <span class="vip">SVIP1</span></div><div class="chat-message"><span>[哭]</span></div></div><div class="chat-meta">14:43</div></div>
                     </div>
                 </div>
 
                 <!-- 联系人页面 -->
                 <div id="page-contacts" class="page">
+                    <header class="page-header"><div class="page-title">联系人</div><div class="header-actions"><i class="fa-solid fa-user-plus"></i></div></header>
+                    <div class="search-bar"><i class="fa-solid fa-magnifying-glass"></i><span>搜索</span></div>
+                    <div class="contact-options"><div class="contact-option-item"><span>新朋友</span><i class="fa-solid fa-chevron-right"></i></div><div class="contact-option-item"><span>群通知</span><i class="fa-solid fa-chevron-right"></i></div></div>
+                    <div class="contact-groups"><div class="group-item"><div class="group-header"><div><i class="fa-solid fa-chevron-right"></i> 特别关心</div><span>3/3</span></div></div><div class="group-item"><div class="group-header"><div><i class="fa-solid fa-chevron-right"></i> 友</div><span>585/850</span></div></div><div class="group-item"><div class="group-header"><div><i class="fa-solid fa-chevron-right"></i> 亲</div><span>3/4</span></div></div></div>
+                </div>
+
+                <!-- 小工具页面 (已重构) -->
+                <div id="page-tools" class="page">
                     <header class="page-header">
-                        <div class="page-title">联系人</div>
-                        <div class="header-actions">
-                            <i class="fa-solid fa-user-plus"></i>
-                        </div>
+                        <div class="page-title">小工具</div>
                     </header>
-                    <div class="search-bar">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <span>搜索</span>
-                    </div>
-                    <div class="contact-options">
-                        <div class="contact-option-item"><span>新朋友</span><i class="fa-solid fa-chevron-right"></i></div>
-                        <div class="contact-option-item"><span>群通知</span><i class="fa-solid fa-chevron-right"></i></div>
-                    </div>
-                    <div class="contact-groups">
-                        <div class="group-item">
-                            <div class="group-header">
-                                <div><i class="fa-solid fa-chevron-right"></i> 特别关心</div>
-                                <span>3/3</span>
+                    <div class="tools-page-content">
+                        <div class="tool-category">
+                            <h3 class="tool-category-title">功能类</h3>
+                            <div class="actions-grid">
+                                <div class="action-item"><i class="fa-solid fa-book-open"></i><span>小说</span></div>
+                                <div class="action-item"><i class="fa-solid fa-music"></i><span>音乐</span></div>
+                                <div class="action-item"><i class="fa-solid fa-note-sticky"></i><span>记事本</span></div>
                             </div>
                         </div>
-                        <div class="group-item">
-                            <div class="group-header">
-                                <div><i class="fa-solid fa-chevron-right"></i> 友</div>
-                                <span>585/850</span>
+                        <div class="tool-category">
+                            <h3 class="tool-category-title">休闲类</h3>
+                            <div class="actions-grid">
+                                <div class="action-item"><i class="fa-solid fa-egg"></i><span>扭蛋</span></div>
+                                <div class="action-item"><i class="fa-solid fa-tractor"></i><span>农场</span></div>
+                                <div class="action-item"><i class="fa-solid fa-paw"></i><span>宠物</span></div>
+                                <div class="action-item"><i class="fa-solid fa-utensils"></i><span>烹饪</span></div>
                             </div>
                         </div>
-                        <div class="group-item">
-                            <div class="group-header">
-                                <div><i class="fa-solid fa-chevron-right"></i> 亲</div>
-                                <span>3/4</span>
+                        <div class="tool-category">
+                            <h3 class="tool-category-title">桌游类</h3>
+                            <div class="actions-grid">
+                                <div class="action-item"><i class="fa-solid fa-user-secret"></i><span>谁是卧底</span></div>
+                                <div class="action-item"><i class="fa-solid fa-moon"></i><span>狼人杀</span></div>
+                                <div class="action-item"><i class="fa-solid fa-comments"></i><span>真心话</span></div>
+                                <div class="action-item"><i class="fa-solid fa-plane"></i><span>飞行棋</span></div>
                             </div>
                         </div>
                     </div>
@@ -166,61 +141,16 @@
 
                 <!-- 动态页面 -->
                 <div id="page-feed" class="page">
-                    <header class="page-header">
-                        <div class="page-title">动态</div>
-                        <div class="header-actions">
-                            <i class="fa-regular fa-bell"></i>
-                            <i class="fa-solid fa-gear"></i>
-                        </div>
-                    </header>
+                    <header class="page-header"><div class="page-title">动态</div><div class="header-actions"><i class="fa-regular fa-bell"></i><i class="fa-solid fa-gear"></i></div></header>
                     <div class="feed-content">
-                        <div class="feed-profile-banner">
-                            <img src="https://picsum.photos/seed/user1/50/50" alt="avatar" class="avatar">
-                            <div class="feed-user-info">
-                                <span>京九殊</span>
-                                <span class="vip-small">VIP1</span>
-                            </div>
-                            <i class="fa-solid fa-chevron-right"></i>
-                        </div>
-                        <div class="actions-grid">
-                            <div class="action-item"><i class="fa-solid fa-image"></i><span>相册</span></div>
-                            <div class="action-item"><i class="fa-solid fa-comment-dots"></i><span>说说</span></div>
-                            <div class="action-item"><i class="fa-solid fa-grip"></i><span>更多</span></div>
-                            <!-- “游戏中心”, “小说动漫”, “农场” 已被删除 -->
-                        </div>
-                        <div class="feed-card">
-                            <div class="feed-card-header">
-                                <img src="https://picsum.photos/seed/user5/100/100" alt="avatar">
-                                <div class="author-info">
-                                    <div class="author-name">魔法师</div>
-                                    <div class="post-time">今天 16:11</div>
-                                </div>
-                                <i class="fa-solid fa-ellipsis"></i>
-                            </div>
-                            <div class="feed-card-body">
-                                <p>我想玩，码</p>
-                                <div class="shared-content">
-                                    猫咪迷惑行为大赏: #单页规则翻译# ...
-                                </div>
-                            </div>
-                        </div>
+                        <div class="feed-profile-banner"><img src="https://picsum.photos/seed/user1/50/50" alt="avatar" class="avatar"><div class="feed-user-info"><span>京九殊</span><span class="vip-small">VIP1</span></div><i class="fa-solid fa-chevron-right"></i></div>
+                        <div class="actions-grid"><div class="action-item"><i class="fa-solid fa-image"></i><span>相册</span></div><div class="action-item"><i class="fa-solid fa-comment-dots"></i><span>说说</span></div><div class="action-item"><i class="fa-solid fa-grip"></i><span>更多</span></div></div>
+                        <div class="feed-card"><div class="feed-card-header"><img src="https://picsum.photos/seed/user5/100/100" alt="avatar"><div class="author-info"><div class="author-name">魔法师</div><div class="post-time">今天 16:11</div></div><i class="fa-solid fa-ellipsis"></i></div><div class="feed-card-body"><p>我想玩，码</p><div class="shared-content">猫咪迷惑行为大赏: #单页规则翻译# ...</div></div></div>
                     </div>
                 </div>
-
-                <!-- 新增：小工具页面 -->
-                <div id="page-tools" class="page">
-                    <header class="page-header">
-                        <div class="page-title">小工具</div>
-                    </header>
-                    <div class="placeholder-content">
-                        <i class="fa-solid fa-toolbox"></i>
-                        <p>小工具页面</p>
-                    </div>
-                </div>
-
             </main>
 
-            <!-- 底部导航栏 -->
+            <!-- 底部导航栏已按新顺序排列, 并更换了图标 -->
             <nav class="bottom-nav">
                 <button class="nav-button active" data-target="page-messages">
                     <i class="fa-solid fa-comment-dots"></i>
@@ -228,12 +158,12 @@
                 <button class="nav-button" data-target="page-contacts">
                     <i class="fa-solid fa-address-book"></i>
                 </button>
+                <button class="nav-button" data-target="page-tools">
+                    <i class="fa-solid fa-toolbox"></i>
+                </button>
                 <button class="nav-button" data-target="page-feed">
                     <i class="fa-solid fa-star"></i>
                     <div class="notification-dot"></div>
-                </button>
-                <button class="nav-button" data-target="page-tools">
-                    <i class="fa-solid fa-shapes"></i>
                 </button>
             </nav>
         </div> <!-- End of main-content-wrapper -->
