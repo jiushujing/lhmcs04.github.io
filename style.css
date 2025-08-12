@@ -86,9 +86,10 @@ body {
 .search-bar {
     background-color: var(--white-color);
     border-radius: 8px;
-    margin: 5px 15px;
-    /* 上下10px，左右15px的内边距，这里控制高度 */
-    padding: 10px 15px; 
+    /* 上5px，左右15px，下10px的外边距 */
+    margin: 5px 15px 10px; 
+    /* 上下6px，左右15px的内边距，这里控制高度 */
+    padding: 6px 15px; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -100,11 +101,6 @@ body {
 .main-content { flex: 1; overflow-y: auto; position: relative; }
 .page { display: none; height: 100%; flex-direction: column; }
 .page.active { display: flex; }
-
-/* 消息页面 & 联系人页面列表的通用间距 (已修改) */
-.chat-list, .contact-groups {
-    margin-top: 10px;
-}
 
 /* 消息页面列表 */
 .chat-list { flex: 1; overflow-y: auto; }
