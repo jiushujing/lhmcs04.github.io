@@ -75,35 +75,35 @@ body {
 .status-bar { display: flex; justify-content: space-between; align-items: center; padding: 10px 20px 5px; font-size: 14px; font-weight: 600; color: var(--text-primary); flex-shrink: 0; }
 .status-bar div i { margin-left: 6px; }
 
-/* ======== 标题栏对齐修正区 ======== */
+
+/* ======== 最终修正区 ======== */
 .page-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* 统一内边距，确保容器高度基准一致 */
-    padding: 10px 15px;
+    padding: 0 15px; /* 上下padding设为0，由固定高度控制 */
+    
+    /* 
+       ↓↓↓ 这就是终极武器！↓↓↓
+       我们给标题栏一个固定的高度，比如 55px。
+       这样两个页面的标题栏就一样高了，搜索框就绝对对齐了！
+       你可以自己把 55px 改成 50px 或 60px，直到你满意为止。
+    */
+    height: 55px; 
 }
 
 .user-info { display: flex; align-items: center; cursor: pointer; }
 .user-info .avatar {
-    /* 1. 缩小头像 */
     width: 32px;
     height: 32px;
     border-radius: 50%;
     margin-right: 10px;
 }
-.user-info span {
-    /* 2. 统一字体大小 */
+.user-info span, .page-title {
     font-size: 20px;
-}
-
-.page-title {
     font-weight: bold;
-    /* 2. 统一字体大小 */
-    font-size: 16px;
 }
-
-.header-actions i { margin-left: 20px; color: var(--text-primary); }
+.header-actions i { margin-left: 20px; color: var(--text-primary); font-size: 22px; }
 /* ======== 修正区结束 ======== */
 
 
@@ -111,7 +111,7 @@ body {
 .search-bar {
     background-color: var(--white-color);
     border-radius: 8px;
-    margin: 5px 15px 10px; 
+    margin: 0 15px 10px; /* 上边距设为0，紧贴标题栏 */
     padding: 8px 15px; 
     display: flex;
     align-items: center;
