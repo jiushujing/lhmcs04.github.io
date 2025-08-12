@@ -102,13 +102,13 @@ body {
 /* 消息页面的搜索框 */
 .messages-search-bar {
     /* 改第一个数字，就能单独把它往下移！比如改成 7px */
-    margin: 5px 15px 10px; 
+    margin: 2px 15px 10px; 
 }
 
 /* 联系人页面的搜索框 */
 .contacts-search-bar {
     /* 如果觉得这个太高了，就把第一个数字改大一点，比如 6px */
-    margin: 18px 15px 10px;
+    margin: 22px 15px 10px;
 }
 /* ======== 微调区结束 ======== */
 
