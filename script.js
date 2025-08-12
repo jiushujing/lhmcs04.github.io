@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 底部导航栏切换功能 ---
     const navButtons = document.querySelectorAll('.nav-button');
     const pages = document.querySelectorAll('.page');
-
     navButtons.forEach(button => {
         button.addEventListener('click', () => {
             const targetId = button.dataset.target;
@@ -19,20 +18,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeSidebarBtn = document.getElementById('sidebar-close-btn');
     const sidebarOverlay = document.querySelector('.sidebar-overlay');
 
-    // 打开侧边栏函数
+    // 【第一步调试】: 检查脚本是否运行并且找到了按钮
+    if (openSidebarBtn) {
+        console.log("成功找到ID为 'open-sidebar-btn' 的元素。");
+        // 【可视化提示】: 给头像区域加一个绿色的边框。
+        // 如果页面加载后看到这个边框，说明JS运行正常且元素已找到。
+        openSidebarBtn.style.border = "2px solid green";
+    } else {
+        // 如果没找到，这是个严重问题，在控制台报错
+        console.error("错误：没有找到ID为 'open-sidebar-btn' 的元素！请检查HTML中的ID是否拼写正确。");
+    }
+
     const openSidebar = () => {
-        // 【调试信息】当函数被调用时，在控制台打印一条消息
-        console.log('打开侧边栏按钮被点击!'); 
         appContainer.classList.add('sidebar-open');
     };
 
-    // 关闭侧边栏函数
     const closeSidebar = () => {
         appContainer.classList.remove('sidebar-open');
     };
 
-    // 关键：为各个元素绑定点击事件
-    // 确保按钮存在后再绑定，防止报错
+    // 确保按钮存在后再绑定事件
     if (openSidebarBtn) {
         openSidebarBtn.addEventListener('click', openSidebar);
     }
