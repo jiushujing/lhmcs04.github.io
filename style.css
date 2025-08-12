@@ -33,17 +33,9 @@ body {
     flex-direction: column;
 }
 
-/* 侧边栏样式 (完全重做以匹配图二) */
+/* 侧边栏样式 */
 .sidebar-menu { position: absolute; top: 0; left: 0; bottom: 0; width: 85%; z-index: 1000; transform: translateX(-100%); transition: transform 0.3s ease-in-out; display: flex; flex-direction: column; background-color: #F8F9FA; }
-.sidebar-background { 
-    position: absolute; 
-    top: 0; left: 0; right: 0; bottom: 0; 
-    background-image: url('https://i.imgur.com/rNnL5aR.jpg'); /* 替换为浅色模糊背景 */
-    background-size: cover; 
-    background-position: center; 
-    opacity: 0.3;
-    z-index: -1; 
-}
+.sidebar-background { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('https://i.imgur.com/rNnL5aR.jpg'); background-size: cover; background-position: center; opacity: 0.3; z-index: -1; }
 .sidebar-content { padding: 20px; padding-top: 50px; display: flex; flex-direction: column; height: 100%; box-sizing: border-box; }
 .sidebar-top-actions { display: flex; justify-content: flex-start; gap: 10px; margin-bottom: 20px; }
 .sidebar-top-actions .action-btn { background-color: #E9ECEF; color: #495057; border: none; border-radius: 20px; padding: 6px 12px; font-size: 12px; display: flex; align-items: center; gap: 5px; cursor: pointer; }
@@ -90,8 +82,17 @@ body {
 .header-actions i { margin-left: 20px; color: var(--text-primary); }
 .page-title { font-weight: bold; }
 
-/* 搜索框 */
-.search-bar { background-color: var(--white-color); border-radius: 8px; margin: 5px 15px; padding: 8px 15px; display: flex; align-items: center; justify-content: center; color: var(--text-secondary); }
+/* 搜索框 (已修改) */
+.search-bar {
+    background-color: var(--white-color);
+    border-radius: 8px;
+    margin: 5px 15px 10px; /* 统一了上下外边距，增加了下方间距 */
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+}
 .search-bar i { margin-right: 8px; }
 
 /* 主内容区域 */
@@ -112,12 +113,8 @@ body {
 .chat-meta i { font-size: 12px; margin-left: 4px; }
 .vip { background: linear-gradient(to right, #fce5b3, #e4a55d); color: #6c4f2f; font-size: 10px; padding: 1px 5px; border-radius: 8px; font-weight: bold; }
 
-/* 联系人页面 */
-.contact-options { background-color: var(--white-color); margin-top: 10px; }
-.contact-option-item { display: flex; justify-content: space-between; align-items: center; padding: 15px; font-size: 16px; }
-.contact-option-item:first-child { border-bottom: 1px solid var(--border-color); }
-.contact-option-item i { color: var(--text-secondary); font-size: 14px; }
-.contact-groups { margin-top: 10px; background-color: var(--white-color); }
+/* 联系人页面 (已修改) */
+.contact-groups { background-color: var(--white-color); } /* 移除了多余的margin-top */
 .group-item .group-header { display: flex; justify-content: space-between; align-items: center; padding: 15px; font-size: 14px; border-bottom: 1px solid var(--border-color); }
 .group-header div { display: flex; align-items: center; }
 .group-header i { margin-right: 10px; color: var(--text-secondary); }
@@ -127,11 +124,9 @@ body {
 .actions-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; background-color: var(--white-color); padding: 20px 10px; border-radius: 8px; text-align: center; }
 .action-item i { font-size: 24px; margin-bottom: 8px; }
 .action-item span { font-size: 12px; display: block; color: var(--text-secondary); }
-/* 动态页图标颜色 */
 .action-item .fa-image { color: #4CAF50; }
 .action-item .fa-comment-dots { color: #2196F3; }
 .action-item .fa-grip { color: #9E9E9E; }
-/* 小工具页图标颜色 */
 .action-item .fa-book-open { color: #FFC107; }
 .action-item .fa-music { color: #E91E63; }
 .action-item .fa-note-sticky { color: #FF9800; }
