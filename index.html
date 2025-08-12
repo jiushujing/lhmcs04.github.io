@@ -11,7 +11,7 @@
 <body>
 
     <div class="app-container">
-        <!-- ==================== 新增：侧边栏菜单 ==================== -->
+        <!-- 侧边栏菜单 -->
         <div class="sidebar-menu">
             <div class="sidebar-background"></div>
             <div class="sidebar-content">
@@ -48,11 +48,8 @@
                     <a href="#" class="nav-item"><i class="fa-solid fa-crown"></i><span>会员中心</span><i class="fa-solid fa-chevron-right"></i></a>
                     <a href="#" class="nav-item"><i class="fa-solid fa-shirt"></i><span>个性装扮</span><i class="fa-solid fa-chevron-right"></i></a>
                 </div>
-
-                <div class="sidebar-promo-item">
-                    <div><i class="fa-solid fa-wifi"></i> 免流量</div>
-                    <div>抽3年SVIP <img src="https://picsum.photos/seed/gift/40/40" alt="gift"> <i class="fa-solid fa-chevron-right"></i></div>
-                </div>
+                
+                <!-- “免流量”条目已删除 -->
 
                 <div class="sidebar-bottom-actions">
                     <button><i class="fa-solid fa-gear"></i><span>设置</span></button>
@@ -61,7 +58,7 @@
                 </div>
             </div>
         </div>
-        <!-- ==================== 新增：遮罩层 ==================== -->
+        <!-- 遮罩层 -->
         <div class="sidebar-overlay"></div>
 
         <!-- 主体内容包裹器 -->
@@ -94,7 +91,6 @@
                         <span>搜索</span>
                     </div>
                     <div class="chat-list">
-                        <!-- 聊天项 -->
                         <div class="chat-item">
                             <img src="https://picsum.photos/seed/user2/100/100" alt="avatar">
                             <div class="chat-details">
@@ -189,10 +185,8 @@
                         <div class="actions-grid">
                             <div class="action-item"><i class="fa-solid fa-image"></i><span>相册</span></div>
                             <div class="action-item"><i class="fa-solid fa-comment-dots"></i><span>说说</span></div>
-                            <div class="action-item"><i class="fa-solid fa-gamepad"></i><span>游戏中心</span></div>
-                            <div class="action-item"><i class="fa-solid fa-book-open"></i><span>小说动漫</span></div>
-                            <div class="action-item"><i class="fa-solid fa-leaf"></i><span>农场</span></div>
                             <div class="action-item"><i class="fa-solid fa-grip"></i><span>更多</span></div>
+                            <!-- “游戏中心”, “小说动漫”, “农场” 已被删除 -->
                         </div>
                         <div class="feed-card">
                             <div class="feed-card-header">
@@ -212,22 +206,34 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- 新增：小工具页面 -->
+                <div id="page-tools" class="page">
+                    <header class="page-header">
+                        <div class="page-title">小工具</div>
+                    </header>
+                    <div class="placeholder-content">
+                        <i class="fa-solid fa-toolbox"></i>
+                        <p>小工具页面</p>
+                    </div>
+                </div>
+
             </main>
 
             <!-- 底部导航栏 -->
             <nav class="bottom-nav">
                 <button class="nav-button active" data-target="page-messages">
                     <i class="fa-solid fa-comment-dots"></i>
-                    <span>消息</span>
                 </button>
                 <button class="nav-button" data-target="page-contacts">
                     <i class="fa-solid fa-address-book"></i>
-                    <span>联系人</span>
                 </button>
                 <button class="nav-button" data-target="page-feed">
                     <i class="fa-solid fa-star"></i>
-                    <span>动态</span>
                     <div class="notification-dot"></div>
+                </button>
+                <button class="nav-button" data-target="page-tools">
+                    <i class="fa-solid fa-shapes"></i>
                 </button>
             </nav>
         </div> <!-- End of main-content-wrapper -->
