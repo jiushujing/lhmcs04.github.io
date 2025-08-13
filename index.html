@@ -84,7 +84,7 @@
                             <i class="fa-solid fa-plus"></i>
                         </div>
                     </header>
-                    <div class="search-bar messages-search-bar"> <!-- 已添加独立类名 -->
+                    <div class="search-bar messages-search-bar">
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <span>搜索</span>
                     </div>
@@ -99,13 +99,25 @@
                 <!-- 联系人页面 -->
                 <div id="page-contacts" class="page">
                     <header class="page-header"><div class="page-title">联系人</div><div class="header-actions"><i class="fa-solid fa-user-plus"></i></div></header>
-                    <div class="search-bar contacts-search-bar"> <!-- 已添加独立类名 -->
+                    <div class="search-bar contacts-search-bar">
                         <i class="fa-solid fa-magnifying-glass"></i><span>搜索</span>
                     </div>
+                    <!-- “新朋友”已加回 -->
                     <div class="contact-options">
                         <div class="contact-option-item"><span>新朋友</span><i class="fa-solid fa-chevron-right"></i></div>
                     </div>
                     <div class="contact-groups"><div class="group-item"><div class="group-header"><div><i class="fa-solid fa-chevron-right"></i> 特别关心</div><span>3/3</span></div></div><div class="group-item"><div class="group-header"><div><i class="fa-solid fa-chevron-right"></i> 友</div><span>585/850</span></div></div><div class="group-item"><div class="group-header"><div><i class="fa-solid fa-chevron-right"></i> 亲</div><span>3/4</span></div></div></div>
+                </div>
+                
+                <!-- 新增：长生树页面 -->
+                <div id="page-tree" class="page">
+                    <header class="page-header">
+                        <div class="page-title">长生树</div>
+                    </header>
+                    <div class="placeholder-content">
+                        <i class="fa-solid fa-tree"></i>
+                        <p>长生树页面</p>
+                    </div>
                 </div>
 
                 <!-- 小工具页面 -->
@@ -119,7 +131,10 @@
                             <div class="actions-grid">
                                 <div class="action-item"><i class="fa-solid fa-book-open"></i><span>小说</span></div>
                                 <div class="action-item"><i class="fa-solid fa-music"></i><span>音乐</span></div>
-                                <div class="action-item"><i class="fa-solid fa-note-sticky"></i><span>记事本</span></div>
+                                <div class="action-item"><i class="fa-solid fa-book-journal-whills"></i><span>日记</span></div>
+                                <div class="action-item"><i class="fa-solid fa-users-rays"></i><span>菲洛图论坛</span></div>
+                                <div class="action-item"><i class="fa-solid fa-hourglass-half"></i><span>专注陪伴</span></div>
+                                <div class="action-item"><i class="fa-solid fa-brain"></i><span>记忆点</span></div>
                             </div>
                         </div>
                         <div class="tool-category">
@@ -154,13 +169,16 @@
                 </div>
             </main>
 
-            <!-- 底部导航栏 -->
+            <!-- 底部导航栏，已更新为5个 -->
             <nav class="bottom-nav">
                 <button class="nav-button active" data-target="page-messages">
                     <i class="fa-solid fa-comment-dots"></i>
                 </button>
                 <button class="nav-button" data-target="page-contacts">
                     <i class="fa-solid fa-address-book"></i>
+                </button>
+                <button class="nav-button" data-target="page-tree">
+                    <i class="fa-solid fa-tree"></i>
                 </button>
                 <button class="nav-button" data-target="page-tools">
                     <i class="fa-solid fa-toolbox"></i>
