@@ -75,41 +75,20 @@ body {
 .status-bar { display: flex; justify-content: space-between; align-items: center; padding: 10px 20px 5px; font-size: 14px; font-weight: 600; color: var(--text-primary); flex-shrink: 0; }
 .status-bar div i { margin-left: 6px; }
 
-
-/* ======== 终极对齐方案 ======== */
-/* ======== 我在这里修复了文件不匹配的BUG ======== */
-.page-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 15px; /* 取消上下内边距，让固定高度生效 */
-    
-    /* 
-       ↓↓↓ 这就是唯一的关键！↓↓↓
-       我给所有页面的标题栏一个固定的高度，强制拉平它们的“地基”。
-       现在搜索框的起跑线就完全一致了！
-    */
-    height: 56px; 
-}
+/* 页面通用头部 */
+.page-header { display: flex; justify-content: space-between; align-items: center; padding: 10px 15px; }
 .user-info { display: flex; align-items: center; cursor: pointer; }
 .user-info .avatar { width: 36px; height: 36px; border-radius: 50%; margin-right: 10px; }
 .user-info span, .page-title { font-size: 22px; font-weight: bold; }
 .header-actions i { margin-left: 20px; color: var(--text-primary); }
-/* ======== 方案结束 ======== */
-
 
 /* 搜索框通用样式 */
-.search-bar {
-    background-color: var(--white-color);
-    border-radius: 8px;
-    padding: 8px 15px; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-secondary);
-    margin: 0 15px 10px; /* 统一的外边距，上边距为0，紧贴标题栏 */
-}
+.search-bar { background-color: var(--white-color); border-radius: 8px; padding: 8px 15px; display: flex; align-items: center; justify-content: center; color: var(--text-secondary); }
 .search-bar i { margin-right: 8px; }
+
+/* 超级微调区 */
+.messages-search-bar { margin: 2px 15px 10px; }
+.contacts-search-bar { margin: 22px 15px 10px; }
 
 /* 主内容区域 */
 .main-content { flex: 1; overflow-y: auto; position: relative; }
@@ -129,12 +108,19 @@ body {
 .chat-meta i { font-size: 12px; margin-left: 4px; }
 .vip { background: linear-gradient(to right, #fce5b3, #e4a55d); color: #6c4f2f; font-size: 10px; padding: 1px 5px; border-radius: 8px; font-weight: bold; }
 
-/* 联系人页面列表 */
+/* 联系人页面 */
+.contact-options { background-color: var(--white-color); }
+.contact-option-item { display: flex; justify-content: space-between; align-items: center; padding: 15px; font-size: 16px; border-bottom: 1px solid var(--border-color); }
+.contact-option-item i { color: var(--text-secondary); font-size: 14px; }
 .contact-groups { background-color: var(--white-color); }
 .group-item .group-header { display: flex; justify-content: space-between; align-items: center; padding: 15px; font-size: 14px; border-bottom: 1px solid var(--border-color); }
 .group-header div { display: flex; align-items: center; }
 .group-header i { margin-right: 10px; color: var(--text-secondary); }
 .group-header span { color: var(--text-secondary); }
+
+/* 占位符页面样式 (用于长生树) */
+.placeholder-content { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; color: var(--text-secondary); font-size: 16px; }
+.placeholder-content i { font-size: 80px; margin-bottom: 20px; color: #8BC34A; }
 
 /* 动态 & 小工具页面 通用网格样式 */
 .actions-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; background-color: var(--white-color); padding: 20px 10px; border-radius: 8px; text-align: center; }
@@ -144,10 +130,13 @@ body {
 .action-item .fa-image { color: #4CAF50; }
 .action-item .fa-comment-dots { color: #2196F3; }
 .action-item .fa-grip { color: #9E9E9E; }
-/* 小工具页图标颜色 */
+/* 小工具页图标颜色 (已更新) */
 .action-item .fa-book-open { color: #FFC107; }
 .action-item .fa-music { color: #E91E63; }
-.action-item .fa-note-sticky { color: #FF9800; }
+.action-item .fa-book-journal-whills { color: #673AB7; }
+.action-item .fa-users-rays { color: #03A9F4; }
+.action-item .fa-hourglass-half { color: #BCAAA4; }
+.action-item .fa-brain { color: #FF7043; }
 .action-item .fa-egg { color: #F44336; }
 .action-item .fa-leaf { color: #8BC34A; }
 .action-item .fa-paw { color: #A1887F; }
