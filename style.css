@@ -107,27 +107,27 @@ body {
 .chat-meta { font-size: 12px; color: var(--text-secondary); text-align: right; white-space: nowrap; }
 .vip { background: linear-gradient(to right, #fce5b3, #e4a55d); color: #6c4f2f; font-size: 10px; padding: 1px 5px; border-radius: 8px; font-weight: bold; }
 
-/* ======== 联系人页面精简后样式 ======== */
+/* ======== 联系人页面样式 (已更新) ======== */
 #page-contacts { background-color: var(--white-color); }
 .contact-options { background-color: var(--white-color); }
 .contact-option-item { display: flex; justify-content: space-between; align-items: center; padding: 15px; font-size: 16px; border-bottom: 1px solid var(--border-color); }
 .contact-option-item i { color: var(--text-secondary); font-size: 14px; }
 
-.contact-filters { display: flex; padding: 10px 15px; gap: 30px; border-bottom: 1px solid var(--border-color); }
+.contact-filters { display: flex; padding: 10px 15px; gap: 40px; border-bottom: 1px solid var(--border-color); }
 .filter-item { background: none; border: none; font-size: 16px; color: var(--text-secondary); cursor: pointer; position: relative; padding: 5px 0; }
 .filter-item.active { color: var(--text-primary); font-weight: bold; }
-.filter-item.active::after { content: ''; display: block; width: 22px; height: 3px; background-color: var(--primary-blue); border-radius: 2px; position: absolute; bottom: -12px; left: 50%; transform: translateX(-50%); }
+.filter-item.active::after { content: ''; display: block; width: 22px; height: 3px; background-color: var(--primary-blue); border-radius: 2px; position: absolute; bottom: -2px; left: 50%; transform: translateX(-50%); }
 
-.contacts-content-wrapper { flex: 1; overflow-y: auto; }
+.contacts-content-wrapper { flex: 1; overflow-y: auto; background-color: var(--bg-color); }
 .contacts-content-pane { display: none; }
 .contacts-content-pane.active { display: block; }
 
-.contact-groups { background-color: var(--white-color); padding-top: 10px; }
-.group-item .group-header { display: flex; justify-content: space-between; align-items: center; padding: 15px; font-size: 16px; }
+.contact-groups { background-color: var(--white-color); }
+.group-item .group-header { display: flex; justify-content: space-between; align-items: center; padding: 15px; font-size: 14px; border-bottom: 1px solid var(--border-color); }
 .group-header div { display: flex; align-items: center; }
 .group-header i { margin-right: 10px; color: var(--text-secondary); }
-.group-header span { color: var(--text-secondary); font-size: 14px; }
-/* ======== 样式精简结束 ======== */
+.group-header span { color: var(--text-secondary); }
+/* ======== 联系人页面样式结束 ======== */
 
 /* 占位符页面样式 (用于长生树) */
 .placeholder-content { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; color: var(--text-secondary); }
@@ -149,15 +149,6 @@ body {
 .feed-user-info span:first-child { font-size: 16px; font-weight: bold; }
 .vip-small { background: linear-gradient(to right, #fce5b3, #e4a55d); color: #6c4f2f; font-size: 10px; padding: 1px 5px; border-radius: 8px; font-weight: bold; display: inline-block !important; margin-top: 4px; }
 .feed-profile-banner > i { color: var(--text-secondary); }
-.feed-card { background-color: var(--white-color); border-radius: 8px; margin-top: 15px; padding: 15px; }
-.feed-card-header { display: flex; align-items: flex-start; }
-.feed-card-header img { width: 40px; height: 40px; border-radius: 50%; margin-right: 10px; }
-.author-info { flex-grow: 1; }
-.author-name { font-weight: 500; }
-.post-time { font-size: 12px; color: var(--text-secondary); margin-top: 2px; }
-.feed-card-header > i { color: var(--text-secondary); }
-.feed-card-body p { margin: 10px 0; font-size: 15px; line-height: 1.5; }
-.shared-content { background-color: var(--bg-color); padding: 10px; border-radius: 6px; font-size: 14px; color: var(--text-secondary); }
 
 /* 底部导航 */
 .bottom-nav { display: flex; justify-content: space-around; align-items: center; background-color: #FDFDFD; border-top: 1px solid var(--border-color); padding: 5px 0; height: 45px; flex-shrink: 0; }
