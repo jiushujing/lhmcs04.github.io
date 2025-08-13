@@ -106,7 +106,6 @@ body {
 
 /* 联系人页面的搜索框 */
 .contacts-search-bar {
-    /* [MODIFIED] 减小了顶部外边距 */
     margin: 10px 15px 10px;
 }
 /* ======== CONTROL PANEL END ======== */
@@ -137,12 +136,12 @@ body {
 .group-header i { margin-right: 10px; color: var(--text-secondary); }
 .group-header span { color: var(--text-secondary); }
 
-/* [NEW] “新朋友”与下方分组拉开距离 */
+/* “新朋友”与下方分组拉开距离 */
 .group-item.new-friend-group-item {
     margin-bottom: 10px;
 }
 
-/* [MODIFIED] 联系人页面“新朋友”样式 */
+/* 联系人页面“新朋友”样式 */
 .group-header.new-friend-item {
     font-weight: 500;
     color: var(--text-primary);
@@ -176,10 +175,11 @@ body {
 .action-item .fa-comments { color: #009688; }
 .action-item .fa-plane { color: #03A9F4; }
 .action-item .fa-hourglass-half { color: #673AB7; }
-/* [MODIFIED] 更新和新增小工具图标颜色 */
+/* 更新和新增小工具图标颜色 */
 .action-item .fa-book-journal-whills { color: #A0522D; } /* 日记 - 深棕色 */
 .action-item .fa-users-line { color: #2196F3; } /* 菲洛图论坛 - 蓝色 */
-.action-item .fa-lollipop { color: #E91E63; } /* 记忆点 - 玫红色 */
+/* [MODIFIED] 修正了“记忆点”的图标样式 */
+.action-item .fa-map-pin { color: #E91E63; } /* 记忆点 - 玫红色 */
 
 
 /* 动态页特定样式 */
