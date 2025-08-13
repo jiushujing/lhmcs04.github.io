@@ -11,7 +11,7 @@
 <body>
 
     <div class="app-container">
-        <!-- 侧边栏菜单 (内容未变，已折叠) -->
+        <!-- 侧边栏菜单 -->
         <div class="sidebar-menu">
             <div class="sidebar-background"></div>
             <div class="sidebar-content">
@@ -21,6 +21,7 @@
                     <button class="action-btn"><i class="fa-brands fa-qq"></i></button>
                     <button class="action-btn" id="close-sidebar-btn"><i class="fa-solid fa-xmark"></i></button>
                 </div>
+                
                 <div class="sidebar-profile-card">
                     <div class="profile-info">
                         <img src="https://i.imgur.com/Jz9v5aB.png" alt="avatar" class="avatar">
@@ -38,6 +39,7 @@
                         <i class="fa-solid fa-star"></i>
                     </div>
                 </div>
+
                 <div class="sidebar-nav-list">
                     <a href="#" class="nav-item"><i class="fa-solid fa-image"></i><span>相册</span><i class="fa-solid fa-chevron-right"></i></a>
                     <a href="#" class="nav-item"><i class="fa-solid fa-star"></i><span>收藏</span><i class="fa-solid fa-chevron-right"></i></a>
@@ -46,6 +48,7 @@
                     <a href="#" class="nav-item"><i class="fa-solid fa-gem"></i><span>会员中心</span><i class="fa-solid fa-chevron-right"></i></a>
                     <a href="#" class="nav-item"><i class="fa-solid fa-shirt"></i><span>个性装扮</span><i class="fa-solid fa-chevron-right"></i></a>
                 </div>
+
                 <div class="sidebar-bottom-actions">
                     <button><i class="fa-solid fa-gear"></i><span>设置</span></button>
                     <button><i class="fa-solid fa-moon"></i><span>夜间</span></button>
@@ -70,7 +73,7 @@
 
             <!-- 页面内容区域 -->
             <main class="main-content">
-                <!-- 消息页面 (内容未变，已折叠) -->
+                <!-- 消息页面 -->
                 <div id="page-messages" class="page active">
                     <header class="page-header">
                         <div class="user-info" id="open-sidebar-btn">
@@ -81,7 +84,7 @@
                             <i class="fa-solid fa-plus"></i>
                         </div>
                     </header>
-                    <div class="search-bar messages-search-bar">
+                    <div class="search-bar messages-search-bar"> <!-- 已添加独立类名 -->
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <span>搜索</span>
                     </div>
@@ -99,17 +102,14 @@
                     <div class="search-bar contacts-search-bar"> <!-- 已添加独立类名 -->
                         <i class="fa-solid fa-magnifying-glass"></i><span>搜索</span>
                     </div>
-                    <!-- [MODIFIED] 将“新朋友”独立成一个部分，以方便添加间距 -->
-                    <div class="new-friend-section">
-                        <div class="group-item">
+                    <div class="contact-groups">
+                        <div class="group-item new-friend-group-item">
                             <div class="group-header new-friend-item">
                                 <!-- [MODIFIED] 移除了图标 -->
                                 <div>新朋友</div>
                                 <i class="fa-solid fa-chevron-right"></i>
                             </div>
                         </div>
-                    </div>
-                    <div class="contact-groups">
                         <div class="group-item"><div class="group-header"><div><i class="fa-solid fa-chevron-right"></i> 特别关心</div><span>3/3</span></div></div>
                         <div class="group-item"><div class="group-header"><div><i class="fa-solid fa-chevron-right"></i> 友</div><span>585/850</span></div></div>
                         <div class="group-item"><div class="group-header"><div><i class="fa-solid fa-chevron-right"></i> 亲</div><span>3/4</span></div></div>
@@ -124,36 +124,77 @@
                     <div class="tools-page-content">
                         <div class="tool-category">
                             <h3 class="tool-category-title">功能类</h3>
+                            <!-- [MODIFIED] 更新了工具列表的图标 -->
                             <div class="actions-grid">
                                 <div class="action-item"><i class="fa-solid fa-book-open"></i><span>小说</span></div>
                                 <div class="action-item"><i class="fa-solid fa-music"></i><span>音乐</span></div>
-                                <!-- [MODIFIED] 日记图标不变 -->
                                 <div class="action-item"><i class="fa-solid fa-book-journal-whills"></i><span>日记</span></div>
-                                <!-- [MODIFIED] 菲洛图论坛图标更换 -->
-                                <div class="action-item"><i class="fa-solid fa-people-group"></i><span>菲洛图论坛</span></div>
+                                <div class="action-item"><i class="fa-solid fa-users-line"></i><span>菲洛图论坛</span></div>
                                 <div class="action-item"><i class="fa-solid fa-hourglass-half"></i><span>专注陪伴</span></div>
-                                <!-- [MODIFIED] 记忆点图标更换 -->
-                                <div class="action-item"><i class="fa-solid fa-location-dot"></i><span>记忆点</span></div>
+                                <div class="action-item"><i class="fa-solid fa-lollipop"></i><span>记忆点</span></div>
                             </div>
                         </div>
-                        <div class="tool-category"><h3 class="tool-category-title">休闲类</h3><div class="actions-grid"><!-- ... --></div></div>
-                        <div class="tool-category"><h3 class="tool-category-title">桌游类</h3><div class="actions-grid"><!-- ... --></div></div>
+                        <div class="tool-category">
+                            <h3 class="tool-category-title">休闲类</h3>
+                            <div class="actions-grid">
+                                <div class="action-item"><i class="fa-solid fa-egg"></i><span>扭蛋</span></div>
+                                <div class="action-item"><i class="fa-solid fa-leaf"></i><span>农场</span></div>
+                                <div class="action-item"><i class="fa-solid fa-paw"></i><span>宠物</span></div>
+                                <div class="action-item"><i class="fa-solid fa-utensils"></i><span>烹饪</span></div>
+                            </div>
+                        </div>
+                        <div class="tool-category">
+                            <h3 class="tool-category-title">桌游类</h3>
+                            <div class="actions-grid">
+                                <div class="action-item"><i class="fa-solid fa-user-secret"></i><span>谁是卧底</span></div>
+                                <div class="action-item"><i class="fa-solid fa-moon"></i><span>狼人杀</span></div>
+                                <div class="action-item"><i class="fa-solid fa-comments"></i><span>真心话</span></div>
+                                <div class="action-item"><i class="fa-solid fa-plane"></i><span>飞行棋</span></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
-                <!-- 其他页面 (内容未变，已折叠) -->
-                <div id="page-tree" class="page"><header class="page-header"><div class="page-title">长生树</div></header><div class="tree-container"><i class="fa-solid fa-tree"></i><p>长生树正在茁壮成长...</p></div></div>
-                <div id="page-feed" class="page"><header class="page-header"><div class="page-title">动态</div><div class="header-actions"><i class="fa-regular fa-bell"></i><i class="fa-solid fa-gear"></i></div></header><div class="feed-content"><div class="feed-profile-banner"><img src="https://picsum.photos/seed/user1/50/50" alt="avatar" class="avatar"><div class="feed-user-info"><span>京九殊</span><span class="vip-small">VIP1</span></div><i class="fa-solid fa-chevron-right"></i></div><div class="actions-grid"><div class="action-item"><i class="fa-solid fa-image"></i><span>相册</span></div><div class="action-item"><i class="fa-solid fa-comment-dots"></i><span>说说</span></div><div class="action-item"><i class="fa-solid fa-grip"></i><span>更多</span></div></div><div class="feed-card"><div class="feed-card-header"><img src="https://picsum.photos/seed/user5/100/100" alt="avatar"><div class="author-info"><div class="author-name">魔法师</div><div class="post-time">今天 16:11</div></div><i class="fa-solid fa-ellipsis"></i></div><div class="feed-card-body"><p>我想玩，码</p><div class="shared-content">猫咪迷惑行为大赏: #单页规则翻译# ...</div></div></div></div></div>
 
+                <!-- 长生树页面 -->
+                <div id="page-tree" class="page">
+                    <header class="page-header">
+                        <div class="page-title">长生树</div>
+                    </header>
+                    <div class="tree-container">
+                        <i class="fa-solid fa-tree"></i>
+                        <p>长生树正在茁壮成长...</p>
+                    </div>
+                </div>
+
+                <!-- 动态页面 -->
+                <div id="page-feed" class="page">
+                    <header class="page-header"><div class="page-title">动态</div><div class="header-actions"><i class="fa-regular fa-bell"></i><i class="fa-solid fa-gear"></i></div></header>
+                    <div class="feed-content">
+                        <div class="feed-profile-banner"><img src="https://picsum.photos/seed/user1/50/50" alt="avatar" class="avatar"><div class="feed-user-info"><span>京九殊</span><span class="vip-small">VIP1</span></div><i class="fa-solid fa-chevron-right"></i></div>
+                        <div class="actions-grid"><div class="action-item"><i class="fa-solid fa-image"></i><span>相册</span></div><div class="action-item"><i class="fa-solid fa-comment-dots"></i><span>说说</span></div><div class="action-item"><i class="fa-solid fa-grip"></i><span>更多</span></div></div>
+                        <div class="feed-card"><div class="feed-card-header"><img src="https://picsum.photos/seed/user5/100/100" alt="avatar"><div class="author-info"><div class="author-name">魔法师</div><div class="post-time">今天 16:11</div></div><i class="fa-solid fa-ellipsis"></i></div><div class="feed-card-body"><p>我想玩，码</p><div class="shared-content">猫咪迷惑行为大赏: #单页规则翻译# ...</div></div></div>
+                    </div>
+                </div>
             </main>
 
-            <!-- 底部导航栏 (内容未变，已折叠) -->
+            <!-- 底部导航栏 -->
             <nav class="bottom-nav">
-                <button class="nav-button active" data-target="page-messages"><i class="fa-solid fa-comment-dots"></i></button>
-                <button class="nav-button" data-target="page-contacts"><i class="fa-solid fa-address-book"></i></button>
-                <button class="nav-button" data-target="page-tree"><i class="fa-solid fa-tree"></i></button>
-                <button class="nav-button" data-target="page-tools"><i class="fa-solid fa-toolbox"></i></button>
-                <button class="nav-button" data-target="page-feed"><i class="fa-solid fa-star"></i><div class="notification-dot"></div></button>
+                <button class="nav-button active" data-target="page-messages">
+                    <i class="fa-solid fa-comment-dots"></i>
+                </button>
+                <button class="nav-button" data-target="page-contacts">
+                    <i class="fa-solid fa-address-book"></i>
+                </button>
+                <button class="nav-button" data-target="page-tree">
+                    <i class="fa-solid fa-tree"></i>
+                </button>
+                <button class="nav-button" data-target="page-tools">
+                    <i class="fa-solid fa-toolbox"></i>
+                </button>
+                <button class="nav-button" data-target="page-feed">
+                    <i class="fa-solid fa-star"></i>
+                    <div class="notification-dot"></div>
+                </button>
             </nav>
         </div> <!-- End of main-content-wrapper -->
     </div>
