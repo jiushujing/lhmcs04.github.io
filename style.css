@@ -96,19 +96,21 @@ body {
 .search-bar i { margin-right: 8px; }
 
 
-/* ======== 超级微调区：分开控制两个搜索框 ======== */
-/* ======== 在这里你可以单独调整每个搜索框的上下位置 ======== */
+/* ======== YOUR ULTIMATE CONTROL PANEL ======== */
+/* ======== You have TOTAL control here ======== */
 
 /* 消息页面的搜索框 */
 .messages-search-bar {
+    /* 改第一个数字，就能单独把它往下移！比如改成 3px */
     margin: 2px 15px 10px; 
 }
 
 /* 联系人页面的搜索框 */
 .contacts-search-bar {
+    /* 我猜这个需要往下移很多才能对齐，所以我设了个大点的数 */
     margin: 22px 15px 10px;
 }
-/* ======== 微调区结束 ======== */
+/* ======== CONTROL PANEL END ======== */
 
 
 /* 主内容区域 */
@@ -129,10 +131,7 @@ body {
 .chat-meta i { font-size: 12px; margin-left: 4px; }
 .vip { background: linear-gradient(to right, #fce5b3, #e4a55d); color: #6c4f2f; font-size: 10px; padding: 1px 5px; border-radius: 8px; font-weight: bold; }
 
-/* 联系人页面列表 (新增“新朋友”样式) */
-.contact-options { background-color: var(--white-color); margin-bottom: 10px; }
-.contact-option-item { display: flex; justify-content: space-between; align-items: center; padding: 15px; font-size: 16px; }
-.contact-option-item i { color: var(--text-secondary); font-size: 14px; }
+/* 联系人页面列表 */
 .contact-groups { background-color: var(--white-color); }
 .group-item .group-header { display: flex; justify-content: space-between; align-items: center; padding: 15px; font-size: 14px; border-bottom: 1px solid var(--border-color); }
 .group-header div { display: flex; align-items: center; }
@@ -150,6 +149,7 @@ body {
 /* 小工具页图标颜色 */
 .action-item .fa-book-open { color: #FFC107; }
 .action-item .fa-music { color: #E91E63; }
+.action-item .fa-note-sticky { color: #FF9800; }
 .action-item .fa-egg { color: #F44336; }
 .action-item .fa-leaf { color: #8BC34A; }
 .action-item .fa-paw { color: #A1887F; }
@@ -158,11 +158,6 @@ body {
 .action-item .fa-moon { color: #3F51B5; }
 .action-item .fa-comments { color: #009688; }
 .action-item .fa-plane { color: #03A9F4; }
-/* 小工具页新图标颜色 */
-.action-item .fa-book-journal-whills { color: #FF9800; }
-.action-item .fa-people-group { color: #4CAF50; }
-.action-item .fa-hourglass-half { color: #9C27B0; }
-.action-item .fa-map-pin { color: #F44336; }
 
 /* 动态页特定样式 */
 .feed-content { flex: 1; overflow-y: auto; padding: 0 15px; }
@@ -174,7 +169,6 @@ body {
 .vip-small { background: linear-gradient(to right, #fce5b3, #e4a55d); color: #6c4f2f; font-size: 10px; padding: 1px 5px; border-radius: 8px; font-weight: bold; display: inline-block !important; margin-top: 4px; }
 .feed-profile-banner > i { color: var(--text-secondary); }
 .actions-grid { margin-top: 15px; }
-.tool-grid-large { grid-template-columns: repeat(3, 1fr); } /* 让功能类工具每行显示3个 */
 .feed-card { background-color: var(--white-color); border-radius: 8px; margin-top: 15px; padding: 15px; }
 .feed-card-header { display: flex; align-items: flex-start; }
 .feed-card-header img { width: 40px; height: 40px; border-radius: 50%; margin-right: 10px; }
@@ -184,22 +178,6 @@ body {
 .feed-card-header > i { color: var(--text-secondary); }
 .feed-card-body p { margin: 10px 0; font-size: 15px; line-height: 1.5; }
 .shared-content { background-color: var(--bg-color); padding: 10px; border-radius: 6px; font-size: 14px; color: var(--text-secondary); }
-
-/* 新增：长生树页面 & 其他占位符样式 */
-.placeholder-content {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: var(--text-secondary);
-    font-size: 16px;
-}
-.placeholder-content i {
-    font-size: 60px;
-    margin-bottom: 20px;
-}
-.placeholder-content .fa-tree { color: #4CAF50; }
 
 /* 小工具页面样式 */
 .tools-page-content { flex: 1; overflow-y: auto; padding: 0 15px 15px; }
