@@ -88,7 +88,7 @@ body {
 
 /* 超级微调区 */
 .messages-search-bar { margin: 2px 15px 10px; }
-.contacts-search-bar { margin: 22px 15px 10px; }
+.contacts-search-bar { margin: 10px 15px 0; } /* 抬高搜索框，只设置上和左右边距 */
 
 /* 主内容区域 */
 .main-content { flex: 1; overflow-y: auto; position: relative; }
@@ -109,9 +109,14 @@ body {
 .vip { background: linear-gradient(to right, #fce5b3, #e4a55d); color: #6c4f2f; font-size: 10px; padding: 1px 5px; border-radius: 8px; font-weight: bold; }
 
 /* 联系人页面 */
-.contact-options { background-color: var(--white-color); }
+.contact-options { background-color: var(--white-color); margin-top: 10px; }
 .contact-option-item { display: flex; justify-content: space-between; align-items: center; padding: 15px; font-size: 16px; border-bottom: 1px solid var(--border-color); }
 .contact-option-item i { color: var(--text-secondary); font-size: 14px; }
+/* 新增：联系人页面筛选条 */
+.contact-filters { display: flex; padding: 15px; gap: 25px; }
+.filter-item { font-size: 16px; color: var(--text-secondary); cursor: pointer; position: relative; }
+.filter-item.active { color: var(--text-primary); font-weight: bold; }
+.filter-item.active::after { content: ''; display: block; width: 20px; height: 3px; background-color: var(--primary-blue); border-radius: 2px; margin: 5px auto 0; }
 .contact-groups { background-color: var(--white-color); }
 .group-item .group-header { display: flex; justify-content: space-between; align-items: center; padding: 15px; font-size: 14px; border-bottom: 1px solid var(--border-color); }
 .group-header div { display: flex; align-items: center; }
@@ -130,7 +135,7 @@ body {
 .action-item .fa-image { color: #4CAF50; }
 .action-item .fa-comment-dots { color: #2196F3; }
 .action-item .fa-grip { color: #9E9E9E; }
-/* 小工具页图标颜色 (已更新) */
+/* 小工具页图标颜色 */
 .action-item .fa-book-open { color: #FFC107; }
 .action-item .fa-music { color: #E91E63; }
 .action-item .fa-book-journal-whills { color: #673AB7; }
