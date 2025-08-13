@@ -84,7 +84,10 @@
                             <i class="fa-solid fa-plus"></i>
                         </div>
                     </header>
-                    <div class="search-bar messages-search-bar"><i class="fa-solid fa-magnifying-glass"></i><span>搜索</span></div>
+                    <div class="search-bar messages-search-bar"> <!-- 已添加独立类名 -->
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <span>搜索</span>
+                    </div>
                     <div class="chat-list">
                         <div class="chat-item"><img src="https://picsum.photos/seed/user2/100/100" alt="avatar"><div class="chat-details"><div class="chat-title">小号</div><div class="chat-message"><span>[哭]</span></div></div><div class="chat-meta">昨天 21:14</div></div>
                         <div class="chat-item"><div class="avatar-group-logo">LOG</div><div class="chat-details"><div class="chat-title">设计-视觉传达</div><div class="chat-message">继教关老师: @全体成员 本次已提交毕...</div></div><div class="chat-meta">06/05 <i class="fa-solid fa-bell-slash"></i></div></div>
@@ -96,23 +99,13 @@
                 <!-- 联系人页面 -->
                 <div id="page-contacts" class="page">
                     <header class="page-header"><div class="page-title">联系人</div><div class="header-actions"><i class="fa-solid fa-user-plus"></i></div></header>
-                    <div class="search-bar contacts-search-bar"><i class="fa-solid fa-magnifying-glass"></i><span>搜索</span></div>
-                    <!-- “新朋友”已加回 -->
+                    <div class="search-bar contacts-search-bar"> <!-- 已添加独立类名 -->
+                        <i class="fa-solid fa-magnifying-glass"></i><span>搜索</span>
+                    </div>
                     <div class="contact-options">
                         <div class="contact-option-item"><span>新朋友</span><i class="fa-solid fa-chevron-right"></i></div>
                     </div>
                     <div class="contact-groups"><div class="group-item"><div class="group-header"><div><i class="fa-solid fa-chevron-right"></i> 特别关心</div><span>3/3</span></div></div><div class="group-item"><div class="group-header"><div><i class="fa-solid fa-chevron-right"></i> 友</div><span>585/850</span></div></div><div class="group-item"><div class="group-header"><div><i class="fa-solid fa-chevron-right"></i> 亲</div><span>3/4</span></div></div></div>
-                </div>
-
-                <!-- 新增：长生树页面 -->
-                <div id="page-tree" class="page">
-                    <header class="page-header">
-                        <div class="page-title">长生树</div>
-                    </header>
-                    <div class="placeholder-content">
-                        <i class="fa-solid fa-tree tree-icon"></i>
-                        <p>长生树页面</p>
-                    </div>
                 </div>
 
                 <!-- 小工具页面 -->
@@ -123,18 +116,15 @@
                     <div class="tools-page-content">
                         <div class="tool-category">
                             <h3 class="tool-category-title">功能类</h3>
-                            <div class="actions-grid tools-grid"> <!-- 添加了一个新类名以更好地区分 -->
+                            <div class="actions-grid">
                                 <div class="action-item"><i class="fa-solid fa-book-open"></i><span>小说</span></div>
                                 <div class="action-item"><i class="fa-solid fa-music"></i><span>音乐</span></div>
-                                <div class="action-item"><i class="fa-solid fa-book-bookmark"></i><span>日记</span></div>
-                                <div class="action-item"><i class="fa-solid fa-users-line"></i><span>菲洛图论坛</span></div>
-                                <div class="action-item"><i class="fa-solid fa-hourglass-half"></i><span>专注陪伴</span></div>
-                                <div class="action-item"><i class="fa-solid fa-map-pin"></i><span>记忆点</span></div>
+                                <div class="action-item"><i class="fa-solid fa-note-sticky"></i><span>记事本</span></div>
                             </div>
                         </div>
                         <div class="tool-category">
                             <h3 class="tool-category-title">休闲类</h3>
-                            <div class="actions-grid tools-grid">
+                            <div class="actions-grid">
                                 <div class="action-item"><i class="fa-solid fa-egg"></i><span>扭蛋</span></div>
                                 <div class="action-item"><i class="fa-solid fa-leaf"></i><span>农场</span></div>
                                 <div class="action-item"><i class="fa-solid fa-paw"></i><span>宠物</span></div>
@@ -143,7 +133,7 @@
                         </div>
                         <div class="tool-category">
                             <h3 class="tool-category-title">桌游类</h3>
-                            <div class="actions-grid tools-grid">
+                            <div class="actions-grid">
                                 <div class="action-item"><i class="fa-solid fa-user-secret"></i><span>谁是卧底</span></div>
                                 <div class="action-item"><i class="fa-solid fa-moon"></i><span>狼人杀</span></div>
                                 <div class="action-item"><i class="fa-solid fa-comments"></i><span>真心话</span></div>
@@ -164,16 +154,13 @@
                 </div>
             </main>
 
-            <!-- 底部导航栏 (已更新为5个按钮) -->
+            <!-- 底部导航栏 -->
             <nav class="bottom-nav">
                 <button class="nav-button active" data-target="page-messages">
                     <i class="fa-solid fa-comment-dots"></i>
                 </button>
                 <button class="nav-button" data-target="page-contacts">
                     <i class="fa-solid fa-address-book"></i>
-                </button>
-                <button class="nav-button" data-target="page-tree">
-                    <i class="fa-solid fa-tree"></i>
                 </button>
                 <button class="nav-button" data-target="page-tools">
                     <i class="fa-solid fa-toolbox"></i>
