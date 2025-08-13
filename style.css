@@ -80,15 +80,36 @@ body {
 .user-info { display: flex; align-items: center; cursor: pointer; }
 .user-info .avatar { width: 36px; height: 36px; border-radius: 50%; margin-right: 10px; }
 .user-info span, .page-title { font-size: 22px; font-weight: bold; }
-.header-actions i { margin-left: 20px; color: var(--text-primary); font-size: 22px; }
+.header-actions i { margin-left: 20px; color: var(--text-primary); }
+
 
 /* 搜索框通用样式 */
-.search-bar { background-color: var(--white-color); border-radius: 8px; padding: 8px 15px; display: flex; align-items: center; justify-content: center; color: var(--text-secondary); }
+.search-bar {
+    background-color: var(--white-color);
+    border-radius: 8px;
+    padding: 8px 15px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+}
 .search-bar i { margin-right: 8px; }
 
-/* 搜索框微调区 */
-.messages-search-bar { margin: 2px 15px 10px; }
-.contacts-search-bar { margin: 10px 15px 0; }
+
+/* ======== 超级微调区：分开控制两个搜索框 ======== */
+/* ======== 在这里你可以单独调整每个搜索框的上下位置 ======== */
+
+/* 消息页面的搜索框 */
+.messages-search-bar {
+    margin: 2px 15px 10px; 
+}
+
+/* 联系人页面的搜索框 */
+.contacts-search-bar {
+    margin: 22px 15px 10px;
+}
+/* ======== 微调区结束 ======== */
+
 
 /* 主内容区域 */
 .main-content { flex: 1; overflow-y: auto; position: relative; }
@@ -105,42 +126,45 @@ body {
 .chat-title { font-size: 16px; color: var(--text-primary); margin-bottom: 4px; }
 .chat-message { font-size: 14px; color: var(--text-secondary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .chat-meta { font-size: 12px; color: var(--text-secondary); text-align: right; white-space: nowrap; }
+.chat-meta i { font-size: 12px; margin-left: 4px; }
 .vip { background: linear-gradient(to right, #fce5b3, #e4a55d); color: #6c4f2f; font-size: 10px; padding: 1px 5px; border-radius: 8px; font-weight: bold; }
 
-/* ======== 联系人页面样式 (已更新) ======== */
-#page-contacts { background-color: var(--white-color); }
-.contact-options { background-color: var(--white-color); }
-.contact-option-item { display: flex; justify-content: space-between; align-items: center; padding: 15px; font-size: 16px; border-bottom: 1px solid var(--border-color); }
+/* 联系人页面列表 (新增“新朋友”样式) */
+.contact-options { background-color: var(--white-color); margin-bottom: 10px; }
+.contact-option-item { display: flex; justify-content: space-between; align-items: center; padding: 15px; font-size: 16px; }
 .contact-option-item i { color: var(--text-secondary); font-size: 14px; }
-
-.contact-filters { display: flex; padding: 10px 15px; gap: 40px; border-bottom: 1px solid var(--border-color); }
-.filter-item { background: none; border: none; font-size: 16px; color: var(--text-secondary); cursor: pointer; position: relative; padding: 5px 0; }
-.filter-item.active { color: var(--text-primary); font-weight: bold; }
-.filter-item.active::after { content: ''; display: block; width: 22px; height: 3px; background-color: var(--primary-blue); border-radius: 2px; position: absolute; bottom: -2px; left: 50%; transform: translateX(-50%); }
-
-.contacts-content-wrapper { flex: 1; overflow-y: auto; background-color: var(--bg-color); }
-.contacts-content-pane { display: none; }
-.contacts-content-pane.active { display: block; }
-
 .contact-groups { background-color: var(--white-color); }
 .group-item .group-header { display: flex; justify-content: space-between; align-items: center; padding: 15px; font-size: 14px; border-bottom: 1px solid var(--border-color); }
 .group-header div { display: flex; align-items: center; }
 .group-header i { margin-right: 10px; color: var(--text-secondary); }
 .group-header span { color: var(--text-secondary); }
-/* ======== 联系人页面样式结束 ======== */
 
-/* 占位符页面样式 (用于长生树) */
-.placeholder-content { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; color: var(--text-secondary); }
-.placeholder-content i { font-size: 80px; margin-bottom: 20px; color: #8BC34A; }
-
-/* 小工具页面 */
-.tools-page-content { flex: 1; overflow-y: auto; padding: 0 15px 15px; }
-.tool-category-title { font-size: 14px; color: var(--text-secondary); padding-left: 5px; margin: 20px 0 10px; }
+/* 动态 & 小工具页面 通用网格样式 */
 .actions-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; background-color: var(--white-color); padding: 20px 10px; border-radius: 8px; text-align: center; }
 .action-item i { font-size: 24px; margin-bottom: 8px; }
 .action-item span { font-size: 12px; display: block; color: var(--text-secondary); }
+/* 动态页图标颜色 */
+.action-item .fa-image { color: #4CAF50; }
+.action-item .fa-comment-dots { color: #2196F3; }
+.action-item .fa-grip { color: #9E9E9E; }
+/* 小工具页图标颜色 */
+.action-item .fa-book-open { color: #FFC107; }
+.action-item .fa-music { color: #E91E63; }
+.action-item .fa-egg { color: #F44336; }
+.action-item .fa-leaf { color: #8BC34A; }
+.action-item .fa-paw { color: #A1887F; }
+.action-item .fa-utensils { color: #607D8B; }
+.action-item .fa-user-secret { color: #424242; }
+.action-item .fa-moon { color: #3F51B5; }
+.action-item .fa-comments { color: #009688; }
+.action-item .fa-plane { color: #03A9F4; }
+/* 小工具页新图标颜色 */
+.action-item .fa-book-journal-whills { color: #FF9800; }
+.action-item .fa-people-group { color: #4CAF50; }
+.action-item .fa-hourglass-half { color: #9C27B0; }
+.action-item .fa-map-pin { color: #F44336; }
 
-/* 动态页面 */
+/* 动态页特定样式 */
 .feed-content { flex: 1; overflow-y: auto; padding: 0 15px; }
 .feed-profile-banner { display: flex; align-items: center; background-color: var(--white-color); padding: 15px; border-radius: 8px; margin-top: 10px; }
 .feed-profile-banner .avatar { width: 45px; height: 45px; border-radius: 50%; margin-right: 12px; }
@@ -149,10 +173,42 @@ body {
 .feed-user-info span:first-child { font-size: 16px; font-weight: bold; }
 .vip-small { background: linear-gradient(to right, #fce5b3, #e4a55d); color: #6c4f2f; font-size: 10px; padding: 1px 5px; border-radius: 8px; font-weight: bold; display: inline-block !important; margin-top: 4px; }
 .feed-profile-banner > i { color: var(--text-secondary); }
+.actions-grid { margin-top: 15px; }
+.tool-grid-large { grid-template-columns: repeat(3, 1fr); } /* 让功能类工具每行显示3个 */
+.feed-card { background-color: var(--white-color); border-radius: 8px; margin-top: 15px; padding: 15px; }
+.feed-card-header { display: flex; align-items: flex-start; }
+.feed-card-header img { width: 40px; height: 40px; border-radius: 50%; margin-right: 10px; }
+.author-info { flex-grow: 1; }
+.author-name { font-weight: 500; }
+.post-time { font-size: 12px; color: var(--text-secondary); margin-top: 2px; }
+.feed-card-header > i { color: var(--text-secondary); }
+.feed-card-body p { margin: 10px 0; font-size: 15px; line-height: 1.5; }
+.shared-content { background-color: var(--bg-color); padding: 10px; border-radius: 6px; font-size: 14px; color: var(--text-secondary); }
+
+/* 新增：长生树页面 & 其他占位符样式 */
+.placeholder-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-secondary);
+    font-size: 16px;
+}
+.placeholder-content i {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+.placeholder-content .fa-tree { color: #4CAF50; }
+
+/* 小工具页面样式 */
+.tools-page-content { flex: 1; overflow-y: auto; padding: 0 15px 15px; }
+.tool-category-title { font-size: 14px; color: var(--text-secondary); padding-left: 5px; margin: 20px 0 10px; }
+.tool-category:first-child .tool-category-title { margin-top: 10px; }
 
 /* 底部导航 */
 .bottom-nav { display: flex; justify-content: space-around; align-items: center; background-color: #FDFDFD; border-top: 1px solid var(--border-color); padding: 5px 0; height: 45px; flex-shrink: 0; }
 .nav-button { background: none; border: none; color: var(--text-secondary); cursor: pointer; position: relative; padding: 0 10px; height: 100%; display: flex; align-items: center; }
-.nav-button i { font-size: 22px; }
+.nav-button i { font-size: 22px; margin-bottom: 0; }
 .nav-button.active { color: var(--primary-blue); }
 .notification-dot { position: absolute; top: 5px; right: 8px; width: 8px; height: 8px; background-color: #FF3B30; border-radius: 50%; }
